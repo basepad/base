@@ -1,19 +1,19 @@
 {
-  "name": "basepad-e2e",
+  "name": "basepad-website-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/basepad-e2e/src",
+  "sourceRoot": "packages/basepad-website-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
       "options": {
-        "cypressConfig": "packages/basepad-e2e/cypress.config.ts",
-        "devServerTarget": "basepad:serve:development",
+        "cypressConfig": "packages/basepad-website-e2e/cypress.config.ts",
+        "devServerTarget": "basepad-website:serve:development",
         "testingType": "e2e"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "basepad:serve:production"
+          "devServerTarget": "basepad-website:serve:production"
         }
       }
     },
@@ -21,10 +21,10 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/basepad-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": ["packages/basepad-website-e2e/**/*.{js,ts}"]
       }
     }
   },
   "tags": [],
-  "implicitDependencies": ["basepad"]
+  "implicitDependencies": ["basepad-website"]
 }

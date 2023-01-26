@@ -15,8 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "design-system": ["packages/design-system/src/index.ts"],
-      "ui": ["packages/ui/src/index.ts"]
+      "@base/tailwind": ["packages/tailwind/src/index.ts"],
+      "@base/ui": ["packages/ui/src/index.ts"],
+      "design-system": ["packages/design-system/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

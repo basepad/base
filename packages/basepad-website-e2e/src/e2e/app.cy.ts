@@ -1,6 +1,6 @@
 import { getGreeting } from '../support/app.po';
 
-describe('basepad', () => {
+describe('basepad-website', () => {
   beforeEach(() => cy.visit('/'));
 
   it('should display welcome message', () => {
@@ -8,6 +8,6 @@ describe('basepad', () => {
     cy.login('my-email@something.com', 'myPassword');
 
     // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome basepad');
+    getGreeting().contains('Welcome basepad-website');
   });
 });

@@ -27,12 +27,30 @@
       "parserOptions": {
         "project": ["./tsconfig.*?.json"]
       },
-      "rules": {}
+      "rules": {
+        "import/no-extraneous-dependencies": "off"
+      }
     },
     {
       "files": ["*.js", "*.jsx"],
       "extends": ["plugin:@nrwl/nx/javascript", "airbnb", "airbnb/hooks"],
       "rules": {}
+    },
+    {
+      "files": ["*test.ts", "*test.tsx", "*spec.ts", "*spec.tsx", "main.tsx"],
+      "rules": {
+        "react/react-in-jsx-scope": "off",
+        "import/no-named-as-default": "off"
+        
+      }
+    },
+    {
+      "files": ["*.config.ts", "tailwind.config.js"],
+      "rules": {
+        "import/no-extraneous-dependencies": "off",
+        "global-require": "off",
+        "import/no-unresolved": "off"
+      }
     }
   ]
 }
