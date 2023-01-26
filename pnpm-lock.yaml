@@ -4,6 +4,7 @@ specifiers:
   '@babel/core': 7.12.13
   '@babel/preset-react': ^7.14.5
   '@babel/preset-typescript': 7.12.13
+  '@heroicons/react': 2.0.14
   '@nrwl/cypress': 15.6.2
   '@nrwl/devkit': 15.6.2
   '@nrwl/eslint-plugin-nx': 15.6.2
@@ -81,6 +82,7 @@ specifiers:
   vitest: ^0.25.8
 
 dependencies:
+  '@heroicons/react': 2.0.14_cb5ruxkz3bqlxwvs2j6rdcpmja
   '@swc/helpers': 0.4.14
   core-js: 3.27.2
   daisyui: 2.49.0_l5bzpxvjbqhurjfyo5fybuhvfy
@@ -2961,6 +2963,14 @@ packages:
     dependencies:
       '@hapi/hoek': 9.3.0
     dev: true
+
+  /@heroicons/react/2.0.14_cb5ruxkz3bqlxwvs2j6rdcpmja:
+    resolution: {integrity: sha512-eFL4if6L7woL1fUvk/jjXx4z9NxVESHHrQnEd2qKVelTFTIr/3VLGWdPb0biia9ZVe26P0JSs/xmOlRNur3SrQ==}
+    peerDependencies:
+      react: '>= 16'
+    dependencies:
+      react: 18.3.0-next-fecc288b7-20221025
+    dev: false
 
   /@humanwhocodes/config-array/0.9.5:
     resolution: {integrity: sha512-ObyMyWxZiCu/yTisA7uzx81s40xR2fD5Cg/2Kq7G02ajkNubJf6BopgDTmDyc3U7sXpNKM8cYOw7s7Tyr+DnCw==}

@@ -78,6 +78,7 @@
     "vitest": "^0.25.8"
   },
   "dependencies": {
+    "@heroicons/react": "2.0.14",
     "@swc/helpers": "~0.4.11",
     "core-js": "^3.6.5",
     "daisyui": "2.49.0",

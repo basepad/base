@@ -1,0 +1,73 @@
+{
+  "name": "bookings-staff-app",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/bookings/staff-app/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/packages/bookings/staff-app",
+        "postcssConfig": "packages/basepad-website/postcss.config.js"
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/vite:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "bookings-staff-app:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "bookings-staff-app:build:development",
+          "hmr": true
+        },
+        "production": {
+          "buildTarget": "bookings-staff-app:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "preview": {
+      "executor": "@nrwl/vite:preview-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "bookings-staff-app:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "bookings-staff-app:build:development"
+        },
+        "production": {
+          "buildTarget": "bookings-staff-app:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nrwl/vite:test",
+      "outputs": ["coverage/packages/bookings/staff-app"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../../coverage/packages/bookings/staff-app"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/bookings/staff-app/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  },
+  "tags": []
+}
