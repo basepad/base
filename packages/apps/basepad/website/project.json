@@ -1,0 +1,74 @@
+{
+  "name": "apps-basepad-website",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/apps/basepad/website/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/packages/apps/basepad/website"
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/vite:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "apps-basepad-website:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "apps-basepad-website:build:development",
+          "hmr": true
+        },
+        "production": {
+          "buildTarget": "apps-basepad-website:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "preview": {
+      "executor": "@nrwl/vite:preview-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "apps-basepad-website:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "apps-basepad-website:build:development"
+        },
+        "production": {
+          "buildTarget": "apps-basepad-website:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nrwl/vite:test",
+      "outputs": ["coverage/packages/apps/basepad/website"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../../../coverage/packages/apps/basepad/website"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "packages/apps/basepad/website/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

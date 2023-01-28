@@ -1,0 +1,75 @@
+{
+  "name": "apps-bookings-staff",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/apps/bookings/staff/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/packages/apps/bookings/staff",
+        "postcssConfig": "packages/basepad-website/postcss.config.js"
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/vite:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "apps-bookings-staff:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "apps-bookings-staff:build:development",
+          "hmr": true
+        },
+        "production": {
+          "buildTarget": "apps-bookings-staff:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "preview": {
+      "executor": "@nrwl/vite:preview-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "apps-bookings-staff:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "apps-bookings-staff:build:development"
+        },
+        "production": {
+          "buildTarget": "apps-bookings-staff:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nrwl/vite:test",
+      "outputs": ["coverage/packages/apps/bookings/staff"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../../../coverage/packages/apps/bookings/staff"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "packages/apps/bookings/staff/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
