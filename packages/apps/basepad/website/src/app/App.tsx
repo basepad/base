@@ -1,7 +1,3 @@
-/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
-/* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable jsx-a11y/anchor-is-valid */
-// TODO: Fix a11y issues
 import React from 'react';
 import 'tailwindcss/tailwind.css';
 
@@ -17,7 +13,7 @@ export function App() {
               <li>TODO: build the whole website lol</li>
             </ul>
           </p>
-          <button className="btn-primary btn" type="submit">
+          <button className="btn-primary btn" type="button">
             Clicking is fun!
           </button>
         </div>
