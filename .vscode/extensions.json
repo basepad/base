@@ -4,6 +4,10 @@
     "esbenp.prettier-vscode",
     "firsttris.vscode-jest-runner",
     "dbaeumer.vscode-eslint",
-    "eamodio.gitlens"
+    "eamodio.gitlens",
+    "csstools.postcss",
+    "burkeholland.simple-react-snippets",
+    "bradlc.vscode-tailwindcss",
+    "lightyen.tailwindcss-intellisense-twin"
   ]
 }
