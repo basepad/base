@@ -9,7 +9,8 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/packages/apps/basepad/website"
+        "outputPath": "dist/packages/apps/basepad/website",
+        "postcssConfig": "packages/apps/basepad/website/postcss.config.js"
       },
       "configurations": {
         "development": {
